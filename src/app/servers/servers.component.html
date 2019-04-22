@@ -1,5 +1,15 @@
-<p>
-  servers works!
-</p>
-<app-server></app-server>
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add button</button>
+
+<p>{{serverCreationStatus}}</p>
+<br/>
+
+<label>Server Name</label>
+<input type="text" class="form-control" (input)="onUpdateServerName($event)" />
+<input type="text" class="form-control" [(ngModel)]="serverName" />
+
+<input type="text" class="form-control" [(ngModel)]="timestamp" />
+<p>{{timestamp}}</p>
+
+<!--p>{{serverName}}</p-->
+<p>{{serverCreationStatus}}</p>
 <app-server></app-server>
